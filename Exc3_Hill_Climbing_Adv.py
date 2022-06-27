@@ -16,6 +16,9 @@ def climb(x, h):
         if h[x + 1] > h[x]:
             x = x + 1         # right is higher, go there
             summit = False    # and keep going
+        elif h[x - 1] > h[x]:
+            x = x - 1         # left is higher, go there
+            summit = False    # and keep going
     return x
 
 
